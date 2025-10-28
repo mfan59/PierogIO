@@ -69,7 +69,7 @@ function applyCoupon(code, order) {
     for (const item of order.items) {
       subtotal += item.unitPriceCents * item.qty;
     }
-    return Math.floor(subtotal * discount);
+    return Math.floor(subtotal * Math.abs(discount));
   }
   
   return 0;
